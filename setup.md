@@ -7,8 +7,7 @@ These steps assume you have purchased a compatible Yubikey and initialized a PIN
 
 ### Client Setup
 1. Insert your Yubikey into your client device (the one you will be using to manage the server)
-2. Open Terminal and generate a new SSH key pair using `ssh-keygen`
-Example:
+2. Open Terminal and generate a new SSH key pair using `ssh-keygen`:
 ```
 ssh-keygen -t ed25519-sk -O resident -O application=ssh:SERVERNAME -O verify-required
 ```
@@ -19,7 +18,7 @@ where `SERVERNAME` is the name of the server you want to SSH into with your new 
 
 > **Note**: This is optional because we are going to set the key to require verification already using the Yubikey. My *opinion* is that an additional password on top of the Yubikey hardware, PIN, and physical presence confirmation is unnecessary.
 
-5. Choose a location to save the file. E.g. `/home/USERNAME/.ssh/SERVERNAME-sk` 
+5. Choose a location to save the file: `/home/USERNAME/.ssh/SERVERNAME-sk` 
 6. Open the SSH config file `sudo nano ~/.ssh/config`
 7. Enter details for the server, following the below example:
 ```
@@ -36,6 +35,7 @@ IdentityFile ~/.ssh/USERNAME/SERVERNAME-sk
 2. We need to copy the contents from this file to the server.
 
     a. If you already have a valid SSH key for the server on the client device, open a new terminal session, using the existing key to connect to the server.
+    
     b. If you can only connect to your server from a *different* device, we need to get the public key for the newly generated key to that device to copy to the server. This can be done by copying a text file to a USB, file share, or cloud vault (e.g. [OneDrive personal vault](https://www.microsoft.com/en-us/microsoft-365/onedrive/personal-vault)). 
 
 ### Server Setup
