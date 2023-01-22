@@ -13,6 +13,7 @@ Example:
 ssh-keygen -t ed25519-sk -O resident -O application=ssh:SERVERNAME -O verify-required
 ```
 where `SERVERNAME` is the name of the server you want to SSH into with your new keys.
+
 3. Enter the PIN set for your Yubikey when prompted.
 4. Optional: Add a password to protect the private key.
 
