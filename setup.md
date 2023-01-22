@@ -66,5 +66,7 @@ rm ~/.ssh/OLDKEY
 rm ~/.ssh/OLD.pub
 ```
 
+Similarly, remove the deleted SSH keys from the server by modifying `~/.ssh/authorized_keys` to remove the lines containing the public keys you no longer need. Remember, the one you just added will have `verify-required` at the end of the line.
+
 ### References
 - [Securing SSH with the Yubikey](https://developers.yubico.com/SSH/)
