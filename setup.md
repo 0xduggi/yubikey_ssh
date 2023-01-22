@@ -59,7 +59,7 @@ sk-ssh-ed25519@openssh.com AAAAGnNrLXNzaC1lZDI1NTE5QG9wZW5zc2guY29tAAAAILhX/sFQ8
 4. You should now be in an SSH session using the newly generated FIDO2 protected SSH key.
 
 ### Remove old SSH keys
-Once you are 100% confident SSH with the new FIDO2-protected key is working, you can remove key files.
+Once you are 100% confident SSH with the new FIDO2-protected key is working, you can remove any old SSH keys on your client. Make sure you do not delete the key pair we just created.
 
 ```
 rm ~/.ssh/OLDKEY
