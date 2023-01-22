@@ -33,9 +33,9 @@ IdentityFile ~/.ssh/USERNAME/SERVERNAME-sk
 
 ### Transfer the Public Key to the server
 1. Still on the client, open the Public Key we just created using `nano ~/.ssh/SERVERNAME-sk.pub`.
-2. We need to copy the contents from this file to the server. 
-  a. If you already have a valid SSH key for the server on the client device, open a new terminal session, using the existing key to connect to the server.
-  b. If you can only connect to your server from a *different* device, we need to get the public key for the newly generated key to that device to copy to the server. This can be done by copying a text file to a USB, file share, or cloud vault (e.g. [OneDrive personal vault](https://www.microsoft.com/en-us/microsoft-365/onedrive/personal-vault)). 
+2. We need to copy the contents from this file to the server.
+    a. If you already have a valid SSH key for the server on the client device, open a new terminal session, using the existing key to connect to the server.
+    b. If you can only connect to your server from a *different* device, we need to get the public key for the newly generated key to that device to copy to the server. This can be done by copying a text file to a USB, file share, or cloud vault (e.g. [OneDrive personal vault](https://www.microsoft.com/en-us/microsoft-365/onedrive/personal-vault)). 
 
 ### Server Setup
 1. SSH into the server with existing key
